@@ -1,0 +1,17 @@
+.input-container {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .button {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: darkblue;
+  }
