@@ -1,5 +1,6 @@
 import { Collapse } from "react-bootstrap";
 import { useState } from "react";
+import imgBackground from "../../../assets/imgBackground.jpg";
 
 export const HomePage = () => {
   const [submenu1Open, setSubmenu1Open] = useState(false);
@@ -8,6 +9,30 @@ export const HomePage = () => {
 
   return (
     <div className="container-fluid">
+       {/* Nueva sección superior con imagen y botón de cerrar sesión */}
+      <div className="col-12 bg-light d-flex justify-content-between align-items-center p-3"
+              style={{
+          backgroundImage: `url(${imgBackground})`,//'url("https://github.com/mdo.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '200px', // Puedes ajustar la altura
+          position: 'relative',
+        }}>
+           {/* Texto centrado en el fondo */}
+        <div className="position-absolute w-100 text-center" 
+                style={{ top: '50%', transform: 'translateY(-50%)',
+                color: 'rgb(255, 255, 255)', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)', }}>
+          <h2>Herramienta de Administración</h2>
+        </div>
+        <img
+          src="https://github.com/mdo.png"
+          alt="Logo"
+          width="50"
+          height="50"
+          className="rounded-circle"
+        />
+        <button className="btn btn-danger">Cerrar sesión</button>
+      </div>
       <div className="row flex-nowrap">
         <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
           <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -39,7 +64,7 @@ export const HomePage = () => {
                   </span>
                 </a>
                 <Collapse in={submenu1Open}>
-                  <ul className="collapse show nav flex-column ms-1">
+                  <ul className="collapse nav flex-column ms-1">
                     <li className="w-100">
                       <a href="#" className="nav-link px-0">
                         <span className="d-none d-sm-inline">
@@ -175,11 +200,10 @@ export const HomePage = () => {
           </div>
         </div>
         <div className="col py-3">
-          <h3>Left Sidebar with Submenus</h3>
+          <h3>Bienvenido al sistema de administración de Sedapal</h3>
           <p className="lead">
-            An example 2-level sidebar with collapsible menu items. The menu
-            functions like an "accordion" where only a single menu is open at a
-            time.
+            Bienvenido a la Herramienta de Administración de Sedapal, tu plataforma para
+             gestionar de manera eficiente los servicios y recursos de la organización.
           </p>
         </div>
       </div>
