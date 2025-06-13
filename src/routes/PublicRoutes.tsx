@@ -1,10 +1,11 @@
 import { LoginPage } from "../features/auth/pages/LoginPage";
+import { HomePage } from "../features/home/pages/HomePage";
 import { UserPage } from "../features/users/pages/UserPage";
 import type { RouteObject } from "react-router-dom";
 export const publicRoutes: RouteObject[] = [
   {
     path: "/",
-    element: <LoginPage />,
+    element: <HomePage />,
   },
   {
     path: "/users",
